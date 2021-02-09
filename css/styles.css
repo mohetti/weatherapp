@@ -1,0 +1,105 @@
+body {
+  font-family: monospace;
+}
+#searchbar-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 30px;
+  margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+}
+
+#search-icon {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  width: 14px;
+}
+
+#searchbar {
+  border: 1px solid gray;
+  border-radius: 5px;
+  height: 20px;
+  width: 100%;
+  padding: 2px 23px 2px 30px;
+  outline: 0;
+  background-color: #f5f5f5;
+}
+
+#weather-container {
+  display: grid;
+  margin-left: 35%;
+  margin-top: 100px;
+  width: 450px;
+  height: 450px;
+  border: 2px solid gray;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 10% 15% 55% 20%;
+  grid-template-areas:
+    'descr .'
+    'city city'
+    'temp info'
+    'clouds wind';
+}
+
+#description {
+  display: flex;
+  grid-area: descr;
+  font-size: 20px;
+  margin-top: auto;
+}
+
+#city {
+  grid-area: city;
+  font-size: 50px;
+}
+
+#temp {
+  display: flex;
+  grid-area: temp;
+  font-size: 70px;
+  align-items: center;
+  justify-content: center;
+}
+
+#info {
+  display: flex;
+  grid-area: info;
+  justify-content: left;
+  align-items: center;
+  font-size: 15px;
+}
+
+br {
+  display: block;
+  margin: 5px 0;
+}
+
+#clouds {
+  grid-area: clouds;
+}
+
+#wind {
+  visibility: hidden;
+  display: flex;
+  grid-area: wind;
+  align-items: center;
+}
+
+#imgWind {
+  height: 50px;
+  width: 50px;
+  transform: rotate(0deg);
+}
+
+.error {
+  display: none;
+  color: red;
+}
+
+#loading {
+  display: none;
+}
